@@ -63,13 +63,19 @@ while running:
                     start_time = pygame.time.get_ticks()
                     timer_started = True
                     music_played = False
+            elif input_box_minutes.collidepoint(event.pos):
+                active_box = 'minutes'
+            elif input_box_seconds.collidepoint(event.pos):
+                active_box = 'seconds'
+            else:
+                active_box = None
         elif event.type == KEYDOWN:
-            if input_box_minutes.collidepoint(pygame.mouse.get_pos()):
+            if active_box == 'minutes':
                 if event.key == K_BACKSPACE:
                     input_minutes = input_minutes[:-1]
                 elif event.unicode.isdigit():
                     input_minutes += event.unicode
-            elif input_box_seconds.collidepoint(pygame.mouse.get_pos()):
+            elif active_box == 'seconds':
                 if event.key == K_BACKSPACE:
                     input_seconds = input_seconds[:-1]
                 elif event.unicode.isdigit():
