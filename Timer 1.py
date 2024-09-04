@@ -88,15 +88,15 @@ while running:
         elapsed_time = (pygame.time.get_ticks() - start_time) / 1000  # Convert to seconds
         time_left = max(0, total_time - int(elapsed_time))
 
-        # Calculate fill percentage
+        # Calculate drain percentage
         if total_time > 0:
-            fill_percentage = min(elapsed_time / total_time, 1)  # Ensure percentage stays within 0 to 1
+            drain_percentage = min(elapsed_time / total_time, 1)  # Ensure percentage stays within 0 to 1
         
             # Rectangle size calculation
-            rect_height = int(screen_height * fill_percentage)
-            rect_top = screen_height - rect_height  # Start filling from the bottom
+            rect_height = int(screen_height * (1 - drain_percentage))  # Drain from the top
+            rect_top = screen_height - rect_height  # Start emptying from the top
 
-            # Draw the filled portion of the rectangle
+            # Draw the drained portion of the rectangle
             pygame.draw.rect(screen, FILL_COLOR, (0, rect_top, screen_width, rect_height))
 
         # Render and display the timer text
