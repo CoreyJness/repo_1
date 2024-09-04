@@ -30,7 +30,7 @@ timer_started = False
 
 # Load the sound but don't play it immediately
 try:
-    mixer.music.load(r'C:\Users\corey\Downloads\mystic-logo-13493.mp3')
+    mixer.music.load(r'C:\Users\corey.jones\Downloads\frantic-screaming-213549.mp3')
 except pygame.error as e:
     print(f"Failed to load sound: {e}")
 
