@@ -93,11 +93,11 @@ while running:
             drain_percentage = min(elapsed_time / total_time, 1)  # Ensure percentage stays within 0 to 1
         
             # Rectangle size calculation
-            rect_height = int(screen_height * (1 - drain_percentage))  # Drain from the top
-            rect_top = screen_height - rect_height  # Start emptying from the top
+            rect_height = int(screen_height * (1 - drain_percentage))  # Decrease height to simulate draining
+            rect_top = screen_height - rect_height  # Position the top of the rectangle
 
             # Draw the drained portion of the rectangle
-            pygame.draw.rect(screen, FILL_COLOR, (0, rect_top, screen_width, rect_height))
+            pygame.draw.rect(screen, FILL_COLOR, (0, rect_top, screen_width, screen_height - rect_top))
 
         # Render and display the timer text
         timer_text = font.render(str(time_left), True, BLACK)
