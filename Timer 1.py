@@ -15,7 +15,7 @@ pygame.display.set_caption('Timer Rectangle')
 # Colors
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-FILL_COLOR = (255, 0, 0)  # Red color for the filling rectangle
+FILL_COLOR = (255, 0, 0)  # Red color for the draining rectangle
 
 # Font settings
 pygame.font.init()
