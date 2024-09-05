@@ -6,7 +6,7 @@ from playsound import playsound
 
 # Initialize Pygame and the mixer for sound
 pygame.init()
-mixer.init()
+playsound.init()
 
 # Screen settings
 screen_width = 400
@@ -32,7 +32,7 @@ timer_started = False
 
 # Load the sound but don't play it immediately
 try:
-    mixer.music.load(r'https://www.youtube.com/watch?v=4JvJd6BkBJ4')
+    playsound(https://www.youtube.com/watch?v=4JvJd6BkBJ4)
 except pygame.error as e:
     print(f"Failed to load sound: {e}")
 
@@ -108,7 +108,7 @@ while running:
         if elapsed_time >= total_time:
             if not music_played:
                 try:
-                    mixer.music.play()  # Play the music when the timer ends
+                    playsound (https://www.youtube.com/watch?v=4JvJd6BkBJ4)  # Play the music when the timer ends
                 except pygame.error as e:
                     print(f"Failed to play sound: {e}")
                 music_played = True
