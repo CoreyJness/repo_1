@@ -2,6 +2,8 @@ import pygame
 from pygame.locals import *
 from pygame import mixer
 
+from playsound import playsound 
+
 # Initialize Pygame and the mixer for sound
 pygame.init()
 mixer.init()
@@ -30,7 +32,7 @@ timer_started = False
 
 # Load the sound but don't play it immediately
 try:
-    mixer.music.load(r'C:\Users\corey.jones\Downloads\frantic-screaming-213549.mp3')
+    mixer.music.load(r'https://www.youtube.com/watch?v=4JvJd6BkBJ4')
 except pygame.error as e:
     print(f"Failed to load sound: {e}")
 
